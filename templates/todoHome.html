@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Hallo</p>
+    {{ name }}
+
+    <form class="form" action="/add-todoHTML" method="post">
+      <div>
+        <label>New Todo</label>
+        <input
+          type="text"
+          name="todo_textHTML"
+          placeholder="Enter todo ..."
+        /><br /><button type="submit">Add</button>
+      </div>
+    </form>
+
+    <table>
+      <tr></tr>
+      {% for todo in todoList %}
+      <tr>
+        <td>{{todo.todo_text}}</td>
+        <td><a href="/delete-todo/{{todo.id}}">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
