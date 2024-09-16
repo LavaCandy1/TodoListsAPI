@@ -26,6 +26,7 @@
       <tr>
         <td>{{todo.todo_text}}</td>
         <td><a href="/delete-todo/{{todo.id}}">Delete</a></td>
+        <td><a href="/toggle-completion/{{todo.id}}">Toggle Completion</a></td>
       </tr>
       {% endfor %}
     </table>

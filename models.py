@@ -6,5 +6,5 @@ class Todo(Base):
 
     id = Column(Integer, primary_key = True, index = True)
     todo_text = Column(String , index = True)
-    # completed = Column(Boolean , default = False)
+    completed = Column(Boolean , default = False)
 
