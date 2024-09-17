@@ -80,6 +80,14 @@ This is a simple To-Do list application built using FastAPI and PostgreSQL as th
 
 In last 2 I have used get method as html only has 2 methods (get and post) but if you look in main.py file. If you want you can find **DELETE** and **UPDATE methods** for both endpoints commneted at bottom of the code.
 
+## Data Models
+- Todo
+  ```
+  {
+  "todo_text": "string",
+  "completed": false
+  }
+  ```
 
 This README.md file includes details about how to set up and run your FastAPI project, the available API endpoints, and the data models used.
 
