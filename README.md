@@ -46,7 +46,7 @@ git clone <your-repository-url>
 cd <repository-directory>
 ```
 2. Install dependencies
-Install the necessary packages via `pip`:
+- Install the necessary packages via `pip`:
 ```
 pip install -r requirements.txt
 ```
@@ -61,7 +61,7 @@ pip install -r requirements.txt
   URL_Database = "postgresql://<username>:<password>@localhost:5432/TodoData"
   ```
 5. Run the Application
-Start the FastAPI server using uvicorn:
+- Start the FastAPI server using uvicorn:
 ```
 uvicorn main:todoApp --reload
 ```
