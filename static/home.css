@@ -87,6 +87,7 @@ body {
 .buttons {
   display: flex;
   gap: 10px;
+  justify-content: space-evenly;
 }
 
 .update_button,
