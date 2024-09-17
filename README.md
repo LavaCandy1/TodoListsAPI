@@ -39,3 +39,29 @@ This is a simple To-Do list application built using FastAPI and PostgreSQL as th
 - Python 3.7+
 - PostgreSQL installed and running
 - Virtual environment for Python (recommended)
+
+1. Clone the repository
+```
+git clone <your-repository-url>
+cd <repository-directory>
+```
+2. Install dependencies
+Install the necessary packages via `pip`:
+```
+pip install -r requirements.txt
+```
+4. Configure PostgreSQL
+- Ensure PostgreSQL is installed and running.
+- Create a PostgreSQL database named TodoData:
+  ```
+  CREATE DATABASE TodoData;
+  ```
+- Update the connection URL in database.py:
+  ```
+  URL_Database = "postgresql://<username>:<password>@localhost:5432/TodoData"
+  ```
+5. Run the Application
+Start the FastAPI server using uvicorn:
+```
+uvicorn main:todoApp --reload
+```
