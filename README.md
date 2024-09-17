@@ -60,9 +60,22 @@ This is a simple To-Do list application built using FastAPI and PostgreSQL as th
       ```
       URL_Database = "postgresql://<username>:<password>@localhost:5432/TodoData"
       ```
-    - This will start the development server at http://127.0.0.1:8000.
+    
 4. Run the Application
     - Start the FastAPI server using uvicorn:
         ```
         uvicorn main:todoApp --reload
         ```
+    - This will start the development server at http://127.0.0.1:8000.
+
+5. Access the home page
+   - Open your browser and navigate to http://127.0.0.1:8000/todoHome to view the To-Do list interface.
+  
+## Endpoints
+
+- GET /todoHome: Renders the to-do list.
+- POST /add-todoHTML: Adds a new to-do item (via form submission).
+- GET /delete-todo/{todo_id}: Deletes a to-do item based on its ID.
+- GET /toggle-completion/{todo_id}: Toggles the completion status of a to-do item based on its ID.
+In last 2 I have used get method as html only has 2 methods (get and post) but if you look in main.py file. If you want you can find **delete** and **update methods** for both endpoints commneted at bottom of the code.
+
