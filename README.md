@@ -73,10 +73,10 @@ This is a simple To-Do list application built using FastAPI and PostgreSQL as th
   
 ## Endpoints
 
-- GET /todoHome: Renders the to-do list.
-- POST /add-todoHTML: Adds a new to-do item (via form submission).
-- GET /delete-todo/{todo_id}: Deletes a to-do item based on its ID.
-- GET /toggle-completion/{todo_id}: Toggles the completion status of a to-do item based on its ID.
+- "get/todoHome" : Renders the to-do list.
+- "post/add-todoHTML" : Adds a new to-do item (via form submission).
+- "get/delete-todo/{todo_id}" : Deletes a to-do item based on its ID.
+- "get/toggle-completion/{todo_id}" : Toggles the completion status of a to-do item based on its ID.
 
 In last 2 I have used get method as html only has 2 methods (get and post) but if you look in main.py file. If you want you can find **delete** and **update methods** for both endpoints commneted at bottom of the code.
 
