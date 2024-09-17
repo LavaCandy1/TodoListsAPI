@@ -85,7 +85,7 @@ In last 2 I have used get method as html only has 2 methods (get and post) but i
   ```
   {
   "todo_text": "string",
-  "completed": false
+  "completed": "boolean"
   }
   ```
 
