@@ -3,32 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',path='home.css')}}" />
+    <title>ToDo List</title>
   </head>
   <body>
-    <p>Hallo</p>
-    {{ name }}
-
-    <form class="form" action="/add-todoHTML" method="post">
-      <div>
-        <label>New Todo</label>
-        <input
-          type="text"
-          name="todo_textHTML"
-          placeholder="Enter todo ..."
-        /><br /><button type="submit">Add</button>
+    <div class="container">
+      <div class="title">
+        <label>TODO List</label>
       </div>
-    </form>
 
-    <table>
-      <tr></tr>
-      {% for todo in todoList %}
-      <tr>
-        <td>{{todo.todo_text}}</td>
-        <td><a href="/delete-todo/{{todo.id}}">Delete</a></td>
-        <td><a href="/toggle-completion/{{todo.id}}">Toggle Completion</a></td>
-      </tr>
-      {% endfor %}
-    </table>
+      <form class="form" action="/add-todoHTML" method="post">
+        <div class="input_box">
+          <input
+            type="text"
+            name="todo_textHTML"
+            placeholder="Enter todo ..."
+          />
+          <button type="submit">Add</button>
+        </div>
+      </form>
+
+      <table class="table">
+        <thead>
+          <tr class="row">
+            <th>Todo</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          {% for todo in todoList %}
+          <tr class="row">
+            {% if todo.completed %}
+            <td class="todo_text completed">{{todo.todo_text}}</td>
+            <td class="todo_status completed">Complete</td>
+            {% else %}
+            <td class="todo_text pending">{{todo.todo_text}}</td>
+            <td class="todo_status pending">Pending</td>
+            {% endif %}
+            <td class="buttons">
+              <a class="update_button" href="/toggle-completion/{{todo.id}}"
+                >Toggle</a
+              >
+              <a class="delete_button" href="/delete-todo/{{todo.id}}"
+                >Delete</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>

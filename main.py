@@ -1,5 +1,6 @@
 from fastapi import FastAPI , HTTPException , Depends, Request, Form, status
 from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import Optional, Annotated
 from sqlalchemy.orm import Session
@@ -10,6 +11,8 @@ import models
 todoApp = FastAPI()
 
 templates = Jinja2Templates(directory = "templates")
+
+todoApp.mount("/static", StaticFiles(directory="static"), name="static")
 
 models.Base.metadata.create_all(bind=engine)
 
