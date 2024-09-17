@@ -60,6 +60,7 @@ This is a simple To-Do list application built using FastAPI and PostgreSQL as th
       ```
       URL_Database = "postgresql://<username>:<password>@localhost:5432/TodoData"
       ```
+    - This will start the development server at http://127.0.0.1:8000.
 4. Run the Application
     - Start the FastAPI server using uvicorn:
         ```
