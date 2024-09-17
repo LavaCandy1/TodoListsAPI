@@ -35,7 +35,7 @@ This is a simple To-Do list application built using FastAPI and PostgreSQL as th
 
 ## Setup and Installation
 
---- Prerequisites
+ **Prerequisites**
     - Python 3.7+
     - PostgreSQL installed and running
     - Virtual environment for Python (recommended)
